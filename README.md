@@ -15,6 +15,32 @@ This repository is my AI Capstone project: **AI Development Environment Setup**,
 - GitHub
 - Cursor AI
 
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- [Git](https://git-scm.com/)
+- [Cursor](https://cursor.com/)
+- A [GitHub](https://github.com/) account
+
+### Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/IllindraRewanth/ai-capstone.git
+   cd ai-capstone
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Open the project in Cursor and start developing with AI assistance.
+
 ## Goals
 
 - Learn AI-assisted development
