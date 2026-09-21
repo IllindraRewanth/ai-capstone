@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings</title>
+  <style>
+    body { font-family: Arial; max-width: 400px; margin: 40px auto; }
+    input { width: 100%; margin-bottom: 10px; padding: 8px; }
+    .error { color: red; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Settings</h1>
+  <form id="settingsForm">
+    <input type="text" placeholder="Display name" id="displayName" />
+    <input type="email" placeholder="Email" id="email" />
+    <label><input type="checkbox" id="notifications" /> Email notifications</label>
+    <br /><br />
+    <button type="submit">Save</button>
+  </form>
+  <p id="message"></p>
+
+  <script>
+    const form = document.getElementById("settingsForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const displayName = document.getElementById("displayName").value;
+      const email = document.getElementById("email").value;
+      const notifications = document.getElementById("notifications").checked;
+
+      if (!displayName || !email) {
+        document.getElementById("message").innerHTML = "<span class='error'>Please fill all fields</span>";
+        return;
+      }
+      if (!email.includes("@")) {
+        document.getElementById("message").innerHTML = "<span class='error'>Invalid email</span>";
+        return;
+      }
+
+      await fetch("/api/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ displayName, email, notifications }),
+      });
+      document.getElementById("message").textContent = "Saved!";
+    });
+  </script>
+</body>
+</html>
