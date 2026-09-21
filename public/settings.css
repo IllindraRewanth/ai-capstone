@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  background: #f6f7f9;
+  color: #1a1a1a;
+}
+
+.settings-page {
+  max-width: 28rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%);
+}
+
+.settings-lede {
+  margin-top: 0;
+  color: #444;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label,
+.fieldset-plain legend {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.field input[type="text"],
+.field input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid #c9ced6;
+  border-radius: 0.35rem;
+}
+
+.field input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.field-error {
+  margin: 0.35rem 0 0;
+  color: #b42318;
+  font-size: 0.875rem;
+}
+
+.fieldset-plain {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.checkbox-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: normal;
+}
+
+button {
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 0.35rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-status {
+  min-height: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.form-status.success {
+  color: #067647;
+}
+
+.form-status.error {
+  color: #b42318;
+}
